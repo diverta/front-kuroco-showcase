@@ -11,7 +11,10 @@ export default function createPrefectureSchema(json, key) {
 		}
 	    result['type'] = 'vuetifyPrefecture'
 	    result['label'] = json['title']
-	    result['options'] = Object.values(json['options'])
+	    result['options'] = []
+	    for (var key in json['options']) {
+	    	result['options'].push({text: json['options'][key], value: key})
+	    }
  	}
 
 	return result

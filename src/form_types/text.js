@@ -7,6 +7,7 @@ export default function createTextSchema(json, key) {
 	    result['type'] = 'vuetifyText'
 	    result['inputType'] = 'text'
 	    result['label'] = json['title']
+	    result['text'] = ''
 	    if (json['required'] == '2') {
 	    	result['required'] = true
 		} else {
@@ -17,7 +18,6 @@ export default function createTextSchema(json, key) {
 	    	if (result['texttype'] == 'regex' && json['validate'].hasOwnProperty('regex')) {
 	    		result['regex'] = json['validate']['regex']
 	    	}
-	    	console.log(result['texttype'])
 		}
 
 	    if (json['attribute']['max_length'] != '') {

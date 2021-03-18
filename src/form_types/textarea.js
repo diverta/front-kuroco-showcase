@@ -8,6 +8,7 @@ export default function createTextAreaSchema(json, key) {
 	    result['inputType'] = 'text'
 	    result['label'] = json['title']
 	    result['placeholder'] = ''
+	    result['text'] = ''
 	    if (json['required'] == '2') {
 	    	result['required'] = true
 		} else {
@@ -18,7 +19,6 @@ export default function createTextAreaSchema(json, key) {
 	    		result['texttype'] = json['validate']['type']
 	    		result['regex'] = json['validate']['regex']
 	    	}
-	    	console.log(result['texttype'])
 		}
 		
 	    if (json['attribute']['max_length'] != '') {

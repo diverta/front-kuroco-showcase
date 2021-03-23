@@ -58,7 +58,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ["@nuxtjs/axios", "@nuxtjs/auth", ['@nuxtjs/pwa', { workbox: false, autoRegister: false }],],
+  modules: ["@nuxtjs/axios", "@nuxtjs/auth", ['@nuxtjs/pwa', { workbox: false, autoRegister: false,manifest: {publicPath:  '/_nuxt/',}}],],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
